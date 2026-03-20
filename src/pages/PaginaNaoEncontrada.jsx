@@ -1,8 +1,11 @@
-export default function PaginaNaoEncontrada() {
+import { Link } from 'react-router-dom'
+function PaginaNaoEncontrada() {
   return (
-    <div>
-      <h1>Página Não Encontrada</h1>
-      <p>A página que você está procurando não foi encontrada.</p>
+    <div className="pagina-404">
+      <h1>404</h1>
+      <p>Ops! Esta página não existe.</p>
+      <Link to="/">Voltar para o início</Link>
     </div>
-  );
+  )
 }
+export default PaginaNaoEncontrada

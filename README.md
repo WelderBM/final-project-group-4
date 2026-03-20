@@ -1,57 +1,55 @@
 # 🗂️ Gestor de Inventário/Coleções
 
-Projeto final do módulo React - **Grupo 4**
+Uma aplicação React para gerenciar coleções pessoais de itens como vinis, cards, action figures e mais.
 
-## 👥 Equipe
-
-| Nome | Responsabilidade | Documento |
-|------|------------------|-----------|
-| **Welder** | Context API + Setup + Integração | [📄 Abrir tutorial](https://docs.google.com/document/d/1M6Qzi4TKtLpN2CQ9NhT8VEQx04jE9o6O/edit?usp=sharing&ouid=111506582589075026526&rtpof=true&sd=true) |
-| **Robert** | React Router + Páginas | [📄 Abrir tutorial](https://docs.google.com/document/d/1D1lo7akPj2bJMSSv3DbjDyU3HXaUYZ23/edit?usp=drive_link&ouid=111506582589075026526&rtpof=true&sd=true) |
-| **Isabelle** | Formulário Controlado | [📄 Abrir tutorial](https://docs.google.com/document/d/1OFAYzmuUOHzMnCbQlcpaLNeraUTb-F0s/edit?usp=drive_link&ouid=111506582589075026526&rtpof=true&sd=true) |
-| **Daniel** | ItemCard + Persistência | [📄 Abrir tutorial](https://docs.google.com/document/d/1udjKzhpielbTYnYEWdAHjh4Kg9wC5yOE/edit?usp=drive_link&ouid=111506582589075026526&rtpof=true&sd=true) |
-| **Karen** | Componentes Visuais (Header, Footer, Categoria) | [📄 Abrir tutorial](https://docs.google.com/document/d/1gGL-kund06A80ZSA34pw2Lhrx82ERVK9/edit?usp=drive_link&ouid=111506582589075026526&rtpof=true&sd=true) |
-
-> 📁 [Pasta com todos os documentos](https://drive.google.com/drive/folders/1XHAcZJWn3oydZsLmbOpWtGiCaosGKshl?usp=drive_link)
+![React](https://img.shields.io/badge/React-19.2.4-61DAFB?logo=react)
+![React Router](https://img.shields.io/badge/React_Router-7.13.1-CA4245?logo=reactrouter)
+![Vite](https://img.shields.io/badge/Vite-8.0.1-646CFF?logo=vite)
 
 ---
 
-## 🚀 Como começar
+## ✨ Funcionalidades
 
-### 1. Clonar o repositório
+- ✅ **Dashboard** com estatísticas da coleção (total de itens, categorias, itens raros)
+- ✅ **Formulário controlado** para adicionar novos itens com validação
+- ✅ **Lista de itens** em cards com informações de raridade e categoria
+- ✅ **Página de detalhes** para cada item via rota dinâmica
+- ✅ **Remoção de itens** com confirmação
+- ✅ **Persistência com localStorage** — dados mantidos após recarregar a página
+- ✅ **Navegação SPA** sem recarregamento usando React Router
+- ✅ **Design responsivo** para desktop e mobile
+
+---
+
+## 🚀 Como executar
+
 ```bash
+# Clonar o repositório
 git clone https://github.com/WelderBM/final-project-group-4.git
 cd final-project-group-4
-```
 
-### 2. Instalar dependências
-```bash
+# Instalar dependências
 npm install
+
+# Iniciar servidor de desenvolvimento
+npm run dev
 ```
 
-### 3. Criar sua branch
+Acesse `http://localhost:5173` no navegador.
+
+---
+
+## 🏗️ Build para produção
+
 ```bash
-# Robert
-git checkout -b feature/rotas
+# Gerar build otimizado
+npm run build
 
-# Isabelle
-git checkout -b feature/formulario
-
-# Daniel
-git checkout -b feature/itemcard-storage
-
-# Karen
-git checkout -b feature/componentes-visuais
+# Pré-visualizar build
+npm run preview
 ```
 
-### 4. Abrir seu tutorial e codar! 💻
-
-### 5. Ao terminar, salvar o trabalho
-```bash
-git add .
-git commit -m "feat: descrição do que você fez"
-git push origin NOME-DA-SUA-BRANCH
-```
+Os arquivos de produção serão gerados na pasta `dist/`.
 
 ---
 
@@ -60,65 +58,102 @@ git push origin NOME-DA-SUA-BRANCH
 ```
 src/
 ├── components/
-│   ├── Header.jsx .............. Karen
-│   ├── Footer.jsx .............. Karen
-│   ├── Categoria.jsx ........... Karen
-│   ├── FormularioItem.jsx ...... Isabelle
-│   └── ItemCard.jsx ............ Daniel
+│   ├── Header.jsx .............. Navegação principal com NavLink
+│   ├── Footer.jsx .............. Rodapé com créditos
+│   ├── Categoria.jsx ........... Badge de categoria
+│   ├── FormularioItem.jsx ...... Formulário controlado com validação
+│   └── ItemCard.jsx ............ Card de exibição de item
 ├── pages/
-│   ├── PaginaInicio.jsx ........ Robert
-│   ├── PaginaInventario.jsx .... Robert
-│   ├── PaginaDetalhes.jsx ...... Robert
-│   └── PaginaNaoEncontrada.jsx . Robert
+│   ├── PaginaInicio.jsx ........ Dashboard com estatísticas
+│   ├── PaginaInventario.jsx .... Lista de itens + formulário
+│   ├── PaginaDetalhes.jsx ...... Detalhes do item (rota dinâmica)
+│   └── PaginaNaoEncontrada.jsx . Página 404
 ├── contexts/
-│   └── InventarioContext.jsx ... Welder
-├── App.jsx ..................... Welder
-├── main.jsx .................... Welder
-└── index.css ................... Welder
+│   └── InventarioContext.jsx ... Context API + localStorage
+├── App.jsx ..................... Configuração de rotas
+├── main.jsx .................... Entry point com providers
+└── index.css ................... Estilos globais
 ```
 
 ---
 
-## ⏱️ Cronograma
+## 🛠️ Tecnologias Utilizadas
 
-| Fase | O que | Quem | Tempo |
-|------|-------|------|-------|
-| 1 | Setup inicial já feito | Welder | ✅ |
-| 2 | Desenvolvimento em paralelo | Todos | ~2h |
-| 3 | Integração final | Welder | ~1h |
-
----
-
-## 🆘 Problemas comuns
-
-**"Não consigo fazer push"**
-```bash
-git branch  # verifica se está na branch certa
-git status  # verifica se fez commit
-```
-
-**"Preciso fazer pull primeiro"**
-```bash
-git pull origin SUA-BRANCH
-git push origin SUA-BRANCH
-```
-
-**"Esqueci de criar a branch"**
-```bash
-git checkout -b feature/SUA-BRANCH  # cria agora, seu código vai junto
-```
+| Tecnologia | Versão | Uso |
+|------------|--------|-----|
+| React | 19.2.4 | Biblioteca UI |
+| React Router DOM | 7.13.1 | Navegação SPA |
+| Vite | 8.0.1 | Build tool |
+| Context API | - | Gerenciamento de estado global |
+| localStorage | - | Persistência de dados |
 
 ---
 
-## 🎯 Funcionalidades do App
+## 📚 Conceitos React Aplicados
 
-- ✅ Dashboard com estatísticas da coleção
-- ✅ Formulário para adicionar itens
-- ✅ Lista de itens com cards
-- ✅ Página de detalhes de cada item
-- ✅ Remoção de itens
-- ✅ Persistência com localStorage (dados salvos mesmo após F5)
+### Context API
+Gerenciamento de estado global para compartilhar dados entre componentes sem prop drilling.
+
+```jsx
+// Criação do contexto
+const InventarioContext = createContext(null)
+
+// Hook customizado para consumir
+export function useInventario() {
+  return useContext(InventarioContext)
+}
+```
+
+### React Router
+Navegação entre páginas sem recarregamento, incluindo rotas dinâmicas.
+
+```jsx
+// Rota dinâmica
+<Route path="/item/:id" element={<PaginaDetalhes />} />
+
+// Acessando parâmetro
+const { id } = useParams()
+```
+
+### Formulário Controlado
+Estado gerenciado pelo React com validação e handler único.
+
+```jsx
+const [form, setForm] = useState({ nome: '', categoria: '' })
+
+const handleChange = (e) => {
+  const { name, value } = e.target
+  setForm(prev => ({ ...prev, [name]: value }))
+}
+```
+
+### localStorage com useEffect
+Persistência automática quando o estado muda.
+
+```jsx
+useEffect(() => {
+  localStorage.setItem('minha-colecao', JSON.stringify(itens))
+}, [itens])
+```
 
 ---
 
-**Dúvidas? Chama o Welder!** 🤙
+## 👥 Equipe - Grupo 4
+
+| Integrante | Responsabilidade |
+|------------|------------------|
+| **Welder** | Context API, Setup inicial, Integração final |
+| **Daniel** | React Router, Páginas (Início, Inventário, Detalhes, 404) |
+| **Isabelle** | Formulário controlado com validação |
+| **Robert** | ItemCard, Link dinâmico, Integração com Categoria |
+| **Karen** | Componentes visuais (Header, Footer, Categoria) |
+
+---
+
+## 📄 Licença
+
+Projeto desenvolvido para fins educacionais — Módulo React, ITEAM 2024.
+
+---
+
+**Feito com 💜 pelo Grupo 4**
